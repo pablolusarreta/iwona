@@ -1,0 +1,41 @@
+{
+    "titular": {
+        "titulo": "Iwona Kopernicka",
+        "descripcion": "Masaje Terapeutico,<br> Deportivo y Quiromasaje",
+        "eslogan": "Si el dolor de espalda no te deja realizar tu vida cotidiana con normalidas, acude a iwona Kopernicka y te lo solucionará.",
+        "ofertas": {
+            "bonos1": "Bonos de 10 sesiones: 30% decuento.",
+            "bonos2": "Bonos de 5 sesiones: 20% decuento.",
+            "tarjetas": "Tenemos tarjetas de regalo para aquellas personas especiales a las que no saber que regalar."
+        }
+    },
+    "secciones": [
+        {
+            "titulo": "Masaje terapeutico deportivo",
+            "texto": "Después de unas merecidas vacaciones, vuelvo con las pilas cargadas",
+            "precio": 28
+        },
+        {
+            "titulo": "Quiromasaje",
+            "texto": "Después de unas merecidas vacaciones, vuelvo con las pilas cargadas",
+            "precio": 25
+        },
+        {
+            "titulo": "Masaje relajante",
+            "texto": "Después de unas merecidas",
+            "precio": 19
+        }
+    ],
+    "pie": {
+        "contacto": {
+            "Correo electronico": "",
+            "telefono1": "943 33 57 69",
+            "telefono2": "678 19 45 12"
+        },
+        "direccion": {
+            "L1": "Idiazabal 7 - B - 3º C",
+            "L2": "20130, URNIETA"
+        },
+        "horarios": {}
+    }
+}

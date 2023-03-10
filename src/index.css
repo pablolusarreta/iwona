@@ -1,0 +1,176 @@
+@font-face {
+    font-family: logo;
+    src: url("fuentes/VINERITC.TTF");
+}
+
+@font-face {
+    font-family: titulo;
+    src: url("fuentes/ubuntu.woff");
+}
+
+@font-face {
+    font-family: texto;
+    src: url("fuentes/segoe.ttf");
+}
+
+:root {
+    --color1: #0a9;
+    --color2: rgb(194, 138, 79);
+    --color3: rgb(79, 108, 194);
+    --color4: #0fc;
+    --colorFondo: #fff;
+    --colorText: #333;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/*----------------------------------------------------------*/
+body {
+
+    font-family: texto, sans-serif;
+    background-color: var(--colorFondo);
+    font-weight: 600;
+    color: var(--colorTexto);
+    font-size: 18px;
+    cursor: default;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    font-weight: 900;
+    background-color: var(--colorFondo);
+    box-shadow: #ccc 4px 4px 4px;
+}
+
+header>div {
+    display: inline-block;
+    margin: 14px 80px;
+    color: var(--color1);
+}
+
+header>div:nth-child(2) {
+    float: right;
+}
+
+header>div>div {
+    margin: 0 20px;
+    display: inline-block;
+    transition: color .4s;
+}
+header>div>div:hover{
+    color: var(--color2);
+}
+header>div>div>img{
+    margin-right: 10px;
+    width: 12px;
+    line-height: 40px;
+    filter: opacity(0.3) drop-shadow(0 0 0 var(--color4));
+}
+#titular {
+    font-family: titulo, sans-serif;
+    color: var(--color1);
+    text-align: center;
+}
+
+#titular>div:nth-child(1) {
+    margin: 100px auto 40px;
+    width: 100px;
+    height: 100px;
+    background-color: var(--color1);
+    background-image: url("img/logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70px 70px;
+    border-radius: 50%;
+}
+
+#titular>div:nth-child(2) {
+    font-family: titulo, sans-serif;
+    font-weight: 100;
+    font-size: 84px;
+}
+
+#titular>div:nth-child(3) {
+    font-family: texto, sans-serif;
+    font-size: 34px;
+}
+
+#eslogan {
+    margin: 40px auto;
+    width: 60vw;
+    font-weight: 100;
+    color: var(--colorTexto);
+}
+
+#whatsapp {
+    display: block;
+    text-decoration: none;
+    margin: auto;
+    padding: 24px 46px;
+    width: 280px;
+    text-align: center;
+    background-color: var(--color1);
+    color: #fff;
+    transition: background-color .4s;
+}
+
+#whatsapp:hover {
+    background-color: var(--color2);
+}
+
+body>img {
+    margin: 40px auto 40px 10%;
+    width: 80%;
+}
+
+section {
+    margin: 40px auto 40px 10%;
+    width: 80%;
+}
+
+section>div {
+    display: inline-block;
+    font-size: 18px;
+    margin: 40px 20px;
+    padding: 20px;
+    width: 500px;
+    height: 500px;
+    background-color: #eee;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100%;
+    border-radius: 2px 2px;
+}
+section>div>div:nth-child(1) {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin-left: auto;
+    line-height: 45px;
+    font-weight: 900;
+    color: #fff;
+    text-align: center;
+    background-color: var(--color1);
+    border-radius: 50%;
+
+}
+section>div>div:nth-child(2) {
+    position: relative;
+    top: -40px;
+    font-family: titulo, sans-serif;
+    font-size: 20px;
+}
+
+section>div>div:nth-child(3) {
+    position: relative;
+    top: -20px;
+
+    font-size: 16px;
+}
+
