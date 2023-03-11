@@ -63,15 +63,18 @@ header>div>div {
     display: inline-block;
     transition: color .4s;
 }
-header>div>div:hover{
+
+header>div>div:hover {
     color: var(--color2);
 }
-header>div>div>img{
+
+header>div>div>img {
     margin-right: 10px;
     width: 12px;
     line-height: 40px;
     filter: opacity(0.3) drop-shadow(0 0 0 var(--color4));
 }
+
 #titular {
     font-family: titulo, sans-serif;
     color: var(--color1);
@@ -103,6 +106,7 @@ header>div>div>img{
 
 #eslogan {
     margin: 40px auto;
+    text-align: center;
     width: 60vw;
     font-weight: 100;
     color: var(--colorTexto);
@@ -147,6 +151,7 @@ section>div {
     background-size: 100%;
     border-radius: 2px 2px;
 }
+
 section>div>div:nth-child(1) {
     position: relative;
     width: 50px;
@@ -160,6 +165,7 @@ section>div>div:nth-child(1) {
     border-radius: 50%;
 
 }
+
 section>div>div:nth-child(2) {
     position: relative;
     top: -40px;
@@ -170,7 +176,30 @@ section>div>div:nth-child(2) {
 section>div>div:nth-child(3) {
     position: relative;
     top: -20px;
-
     font-size: 16px;
 }
 
+ #direccion {
+    text-align: center;
+    padding-top: 20px;
+    width: 80vw;
+    margin-left: 10vw;
+    border: 1px solid #ccc;
+}
+iframe{
+    margin-top: 40px;
+    width: 100%;
+}
+footer{
+    margin-top: 40px;
+    height: 200px;
+    background-color: #eee;
+}
+footer>div{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    height: 160px;
+    margin: 20px 1%;
+    border: 2px dashed #fff;
+}
