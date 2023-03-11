@@ -14,7 +14,7 @@ app.use(morgan('dev'))
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 // static files
-app.use(express.static(path.join(__dirname, './src')))
+app.use(express.static(path.join(__dirname, './docs')))
 // routes
 /*app.use(sqlite)
 app.use(graficos)
