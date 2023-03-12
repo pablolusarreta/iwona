@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDITOR</title>
+    <style>
+        * {
+            font-size: 14px;
+        }
+
+        h1 {
+            font-size: 20px;
+        }
+
+        h2 {
+            font-size: 18px;
+        }
+
+        textarea {
+            position: relative;
+            margin: auto calc(10vw - 20px);
+            width: 80vw;
+        }
+    </style>
+
+</head>
+
+<body>
+    <script>
+        const idiomas = ['castellano', 'euskera']
+        let salida = new String()
+        fetch(`json/${idiomas[0]}.json`)
+            .then(response => response.json())
+            .then(data => {
+                for (const ele in data) {
+                    salida += `<h1>${ele}<h1>`
+                    for (const nom in data[ele]) {
+                        if (typeof data[ele][nom] == 'object') {
+                            salida += `<h2>${nom}<h2>`
+                            for (const nom2 in data[ele][nom]) {
+                                salida += `${nom2}:<br><textarea>${data[ele][nom][nom2]}</textarea><br>`
+                            }
+                        } else {
+                            salida += `&nbsp;&nbsp;${nom}:<br><textarea>${data[ele][nom]}</textarea><br>`
+                        }
+                    } 
+                    salida += '<hr>'
+                }
+                document.body.innerHTML = salida
+            })
+    </script>
+</body>
+
+</html>

@@ -38,6 +38,7 @@ body {
     cursor: default;
 }
 
+/*----------------------------------------------------------*/
 header {
     position: fixed;
     top: 0;
@@ -48,7 +49,7 @@ header {
     box-shadow: #ccc 4px 4px 4px;
 }
 
-header>div {
+header>div, header>a {
     display: inline-block;
     margin: 14px 80px;
     color: var(--color1);
@@ -58,23 +59,29 @@ header>div:nth-child(2) {
     float: right;
 }
 
-header>div>div {
+header>div>a {
+    color: var(--color1);
+    text-decoration: none;
     margin: 0 20px;
-    display: inline-block;
-    transition: color .4s;
+    transition: color .7s;
 }
 
-header>div>div:hover {
+header>div>a:hover {
     color: var(--color2);
 }
 
-header>div>div>img {
+header>div>a:visited, header>div>a:active {
+    color: inherit;
+}
+
+header>div>a>img {
     margin-right: 10px;
     width: 12px;
     line-height: 40px;
     filter: opacity(0.3) drop-shadow(0 0 0 var(--color4));
 }
 
+/*----------------------------------------------------------*/
 #titular {
     font-family: titulo, sans-serif;
     color: var(--color1);
@@ -104,7 +111,7 @@ header>div>div>img {
     font-size: 34px;
 }
 
-#eslogan {
+#eslogan, #ofertas {
     margin: 40px auto;
     text-align: center;
     width: 60vw;
@@ -112,6 +119,12 @@ header>div>div>img {
     color: var(--colorTexto);
 }
 
+#ofertas {
+    font-weight: 900;
+    color: var(--color1);
+}
+
+/*----------------------------------------------------------*/
 #whatsapp {
     display: block;
     text-decoration: none;
@@ -128,12 +141,16 @@ header>div>div>img {
     background-color: var(--color2);
 }
 
+/*----------------------------------------------------------*/
 body>img {
     margin: 40px auto 40px 10%;
     width: 80%;
 }
 
+/*----------------------------------------------------------*/
 section {
+    display: flex;
+    justify-content: center;
     margin: 40px auto 40px 10%;
     width: 80%;
 }
@@ -179,27 +196,43 @@ section>div>div:nth-child(3) {
     font-size: 16px;
 }
 
- #direccion {
+/*----------------------------------------------------------*/
+#direccion {
     text-align: center;
     padding-top: 20px;
     width: 80vw;
     margin-left: 10vw;
     border: 1px solid #ccc;
 }
-iframe{
+
+iframe {
     margin-top: 40px;
     width: 100%;
 }
-footer{
+
+/*----------------------------------------------------------*/
+footer {
+    display: flex;
+    justify-content: center;
     margin-top: 40px;
     height: 200px;
     background-color: #eee;
 }
-footer>div{
+
+footer>div {
     display: inline-block;
+    position: relative;
     text-align: center;
     width: 30%;
     height: 160px;
     margin: 20px 1%;
-    border: 2px dashed #fff;
+    font-weight: 100;
+    background-color: #fff;
+}
+
+footer>div>span {
+    display: block;
+    font-size: 18px;
+    font-weight: 900;
+    margin-bottom: 10px;
 }
