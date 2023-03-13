@@ -219,7 +219,8 @@ footer {
     justify-content: center;
     margin-top: 40px;
     height: 200px;
-    background-color: #eee;
+    color: var(--color1);
+    background-color: #333;
 }
 
 footer>div {
@@ -243,7 +244,6 @@ footer>div>img {
 }
 
 footer a {
-    color: var(--color1);
     text-decoration: none;
     transition: color .7s;
 }
@@ -251,6 +251,7 @@ footer a {
 footer a:hover {
     color: var(--color2);
 }
+
 
 footer a:visited, footer a:active {
     color: inherit;
