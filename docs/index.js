@@ -1,5 +1,10 @@
 const idiomas = ['castellano', 'euskera']
 let idioma_sel
+const idioma = i => {
+    idioma_sel = i;
+    //localStorage.setItem('idioma',idioma_sel)
+    inicio()
+}
 const inicio = () => {
     // CONSTANTES
     const cabecera = document.getElementsByTagName('header')[0]
@@ -7,7 +12,6 @@ const inicio = () => {
     const pie = document.getElementsByTagName('footer')[0]
     const titular = document.getElementById('titular')
     const eslogan = document.getElementById('eslogan')
-    const ofertas = document.getElementById('ofertas')
     // IDIOMA
     if (localStorage.idioma) { idioma_sel = localStorage.idioma } else { idioma_sel = 0 }
     // ARRANQUE
@@ -26,7 +30,6 @@ const inicio = () => {
                                 <div>${data.titular.titulo}</div>
                                 <div>${data.titular.descripcion}</div>`
             eslogan.innerHTML = data.titular.eslogan
-            ofertas.innerHTML = data.titular.ofertas
 
             secciones.innerHTML = ''
             for (const i in data.secciones) {
@@ -44,11 +47,6 @@ const inicio = () => {
                                 ${data.pie[i].texto}</div>`
             }
         })
-}
-const idioma = i => {
-    idioma_sel = i;
-    //localStorage.setItem('idioma',idioma_sel)
-    inicio()
 }
 const fechaActual = () => {
     const hoy = new Date()

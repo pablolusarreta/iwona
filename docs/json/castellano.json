@@ -1,31 +1,36 @@
 {
     "titular": {
-        "titulo": "Iwona Kopernicka",
-        "descripcion": "Masaje Terapeutico,<br> Deportivo y Quiromasaje",
+        "titulo": "Iwona Madej",
+        "descripcion": "Masaje Deportivo y Superior,<br>Quiromasaje y Drenaje Linfático Manual.",
         "eslogan": "\" Si el dolor de espalda no te deja realizar tu vida cotidiana con normalidas, acude a iwona Kopernicka y te lo solucionará. \"",
         "ofertas": "Bonos de 10 sesiones: 30% decuento.<br>Bonos de 5 sesiones: 20% decuento.<br>Tenemos tarjetas de regalo para aquellas personas especiales a las que no saber que regalar. "
     },
     "secciones": [
         {
-            "titulo": "Masaje terapeutico deportivo",
+            "titulo": "Masaje Deportivo y Superior",
             "texto": "Después de unas merecidas vacaciones, vuelvo con las pilas cargadas",
-            "precio": 28
+            "precio": 35
         },
         {
             "titulo": "Quiromasaje",
             "texto": "Después de unas merecidas vacaciones, vuelvo con las pilas cargadas",
+            "precio": 30
+        },
+        {
+            "titulo": "Masaje Relajante",
+            "texto": "Después de unas merecidas",
             "precio": 25
         },
         {
-            "titulo": "Masaje relajante",
+            "titulo": "Drenaje Limfatico Mnual",
             "texto": "Después de unas merecidas",
-            "precio": 19
+            "precio": 45
         }
     ],
     "pie": [
         {
             "titulo": "contacto",
-            "texto": "iwona.kopernicka@gmail.com<br>Telf. 943 33 57 69<br> Movil 678 19 45 12"
+            "texto": "iwonamasaje@gmail.com<br> Movil 678 19 45 12"
         },
         {
             "titulo": "direccion",
