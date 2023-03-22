@@ -116,17 +116,19 @@ header>div>a>img {
     letter-spacing: 10px;
 }
 
-#eslogan, #ofertas {
+#eslogan, #coletilla {
     margin: 40px auto;
     text-align: center;
+    font-size: 23px;
     width: 60vw;
     font-weight: 100;
     color: var(--colorTexto);
+    opacity: 0;
+    transition: opacity 2s
 }
 
-#ofertas {
-    font-weight: 900;
-    color: var(--color1);
+#coletilla {
+    opacity: 1;
 }
 
 /*----------------------------------------------------------*/
@@ -147,9 +149,11 @@ header>div>a>img {
 }
 
 /*----------------------------------------------------------*/
-body>img {
+#imgPortada {
     margin: 40px auto 40px 10%;
     width: 80%;
+    opacity: 0;
+    transition: opacity .5s;
 }
 
 /*----------------------------------------------------------*/

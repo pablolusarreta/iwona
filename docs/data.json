@@ -2,9 +2,23 @@
     "titular": {
         "titulo": "Iwona Madej",
         "descripcion": "Masaje Deportivo y Superior,<br>Quiromasaje y Drenaje Linfático Manual.",
-        "eslogan": "\" Si el dolor de espalda no te deja realizar tu vida cotidiana con normalidas, acude a iwona Kopernicka y te lo solucionará. \"",
-        "ofertas": "Bonos de 10 sesiones: 30% decuento.<br>Bonos de 5 sesiones: 20% decuento.<br>Tenemos tarjetas de regalo para aquellas personas especiales a las que no saber que regalar. "
+        "eslogan": [
+            "\" Este es el eslgan numero uno acude a iwona Madej y te lo solucionará El numero dosEl numero dos. \"",
+            "\" El numero dos, El numero dos El numero dos El numero dos El numero dosacude a iwona Madej y te lo solucionará. \"",
+            "\" Y el numero tres,  Y el numero tres  Y el numero tres  Y el numero tresacude a iwona Madej y te lo solucionará. \""
+        ],
+        "coletilla": "¡ Deja que te cuide !"
     },
+    "imagenes": [
+        "P01.jpg",
+        "P02.jpg",
+        "P03.jpg",
+        "P04.jpg",
+        "P05.jpg",
+        "P06.jpg",
+        "P07.jpg",
+        "P08.jpg"
+    ],
     "secciones": [
         {
             "titulo": "Masaje Deportivo y Superior",
@@ -35,7 +49,6 @@
         {
             "titulo": "direccion",
             "texto": "Idiazabal 7 - B - 3º C<br>20130, URNIETA"
-
         },
         {
             "titulo": "facebook",

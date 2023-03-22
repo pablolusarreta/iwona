@@ -1,10 +1,5 @@
 const idiomas = ['castellano', 'euskera']
-let idioma_sel
-const idioma = i => {
-    idioma_sel = i;
-    //localStorage.setItem('idioma',idioma_sel)
-    inicio()
-}
+let idioma_sel, DATOS
 const inicio = () => {
     // CONSTANTES
     const cabecera = document.getElementsByTagName('header')[0]
@@ -12,24 +7,25 @@ const inicio = () => {
     const pie = document.getElementsByTagName('footer')[0]
     const titular = document.getElementById('titular')
     const eslogan = document.getElementById('eslogan')
-    // IDIOMA
-    if (localStorage.idioma) { idioma_sel = localStorage.idioma } else { idioma_sel = 0 }
+    const coletilla = document.getElementById('coletilla')
+    const imgPortada = document.getElementById('imgPortada')
     // ARRANQUE
-    fetch(`json/${idiomas[idioma_sel]}.json`)
+    fetch("data.json")
         .then(response => response.json())
         .then(data => {
+            DATOS = data
             cabecera.innerHTML = `<div>${fechaActual()}</div>
                                     <div> 
                                         <a href="https://api.whatsapp.com/send?phone=34678194512&text=" target="_blank"><img src="img/whatsapp.png">watsapp</a> 
                                         <a href="tel:346781945" target="_blank"><img src="img/telefono.png">llamar</a> 
                                         <a href="mailto:iwona@gmail.com" target="_blank"><img src="img/email.png">e-mail</a> 
-                                        <!--<a onclick="idioma(${(idioma_sel == 0) ? 1 : 0})">
-                                        <img src="img/idioma.png">${idiomas[(idioma_sel == 0) ? 1 : 0]}</a>-->
                                     </div>`
             titular.innerHTML = `<div></div>
                                 <div>${data.titular.titulo}</div>
                                 <div>${data.titular.descripcion}</div>`
-            eslogan.innerHTML = data.titular.eslogan
+            eslogan_pres()
+            presentacion()
+            coletilla.innerHTML = data.titular.coletilla
 
             secciones.innerHTML = ''
             for (const i in data.secciones) {
@@ -46,7 +42,24 @@ const inicio = () => {
                                 <br>
                                 ${data.pie[i].texto}</div>`
             }
+            setInterval(presentacion, 5000)
+
         })
+}
+const presentacion = () => {
+    imgPortada.addEventListener('load', () => {
+        imgPortada.style.opacity = '1'
+    })
+    imgPortada.style.opacity = '0'
+    setTimeout(() => {
+        let num = Math.floor(DATOS.imagenes.length * Math.random())
+        imgPortada.src = `img/${DATOS.imagenes[num]}`
+    }, 500)
+}
+const eslogan_pres = () => {
+    let num = Math.floor(DATOS.titular.eslogan.length * Math.random())
+    eslogan.innerHTML = DATOS.titular.eslogan[num]
+    eslogan.style.opacity = '1'
 }
 const fechaActual = () => {
     const hoy = new Date()
