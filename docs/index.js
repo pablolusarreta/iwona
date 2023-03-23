@@ -1,5 +1,5 @@
 const idiomas = ['castellano', 'euskera']
-let idioma_sel, DATOS
+let idioma_sel, foto, DATOS
 const inicio = () => {
     // CONSTANTES
     const cabecera = document.getElementsByTagName('header')[0]
@@ -23,8 +23,10 @@ const inicio = () => {
             titular.innerHTML = `<div></div>
                                 <div>${data.titular.titulo}</div>
                                 <div>${data.titular.descripcion}</div>`
+            foto = Math.floor(data.imagenes.length * Math.random())
             eslogan_pres()
             presentacion()
+
             coletilla.innerHTML = data.titular.coletilla
 
             secciones.innerHTML = ''
@@ -52,8 +54,8 @@ const presentacion = () => {
     })
     imgPortada.style.opacity = '0'
     setTimeout(() => {
-        let num = Math.floor(DATOS.imagenes.length * Math.random())
-        imgPortada.src = `img/${DATOS.imagenes[num]}`
+        imgPortada.src = `img/${DATOS.imagenes[foto]}`
+        foto = (foto == (DATOS.imagenes.length - 1)) ? 0 : foto + 1
     }, 500)
 }
 const eslogan_pres = () => {
