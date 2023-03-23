@@ -48,15 +48,15 @@
     ],
     "pie": [
         {
-            "titulo": "Contacto",
+            "titulo": "contacto",
             "texto": "<a href=\"mailto:iwonamasaje@gmail.com\" target=\"_blank\">iwonamasaje@gmail.com</a><br><a href=\"tel:346781945\" target=\"_blank\">Movil 678 19 45 12</a>"
         },
         {
-            "titulo": "Direccion",
+            "titulo": "direccion",
             "texto": "Idiazabal 7 - B - 3º C<br>20130, URNIETA"
         },
         {
-            "titulo": "Facebook",
+            "titulo": "facebook",
             "texto": "<a href=\"https://www.facebook.com/\" target=\"_blanc\">www.facebook.com</a>"
         }
     ]
