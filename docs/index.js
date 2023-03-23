@@ -18,7 +18,7 @@ const inicio = () => {
                                     <div> 
                                         <a href="https://api.whatsapp.com/send?phone=34678194512&text=" target="_blank"><img src="img/whatsapp.png">watsapp</a> 
                                         <a href="tel:346781945" target="_blank"><img src="img/telefono.png">llamar</a> 
-                                        <a href="mailto:iwona@gmail.com" target="_blank"><img src="img/email.png">e-mail</a> 
+                                        <a href="mailto:iwonamasaje@gmail.com" target="_blank"><img src="img/email.png">e-mail</a> 
                                     </div>`
             titular.innerHTML = `<div></div>
                                 <div>${data.titular.titulo}</div>

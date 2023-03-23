@@ -107,19 +107,18 @@ header>div>a>img {
 #titular>div:nth-child(2) {
     font-family: titulo, sans-serif;
     font-weight: 100;
-    font-size: 84px;
+    font-size: 96px;
 }
 
 #titular>div:nth-child(3) {
     font-family: texto, sans-serif;
     font-size: 24px;
-    letter-spacing: 10px;
 }
 
 #eslogan, #coletilla {
     margin: 40px auto;
     text-align: center;
-    font-size: 23px;
+    font-size: 28px;
     width: 60vw;
     font-weight: 900;
     color: #666;
@@ -249,6 +248,7 @@ footer>div>img {
 }
 
 footer a {
+    color: var(--color1);
     text-decoration: none;
     transition: color .7s;
 }

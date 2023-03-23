@@ -3,9 +3,9 @@
         "titulo": "Iwona Madej",
         "descripcion": "Masaje Deportivo y Superior,<br>Quiromasaje y Drenaje Linfático Manual.",
         "eslogan": [
-            "\"Cuida de tu cuerpo, es el único lugar que tienes para vivir\"",
-            "\"Relaja, libera, renueva ...\"",
-            "\"El masaje es una de las artes mas sutiles\""
+            "Cuida de tu cuerpo, es el único lugar que tienes para vivir",
+            "Relaja, libera, renueva ...",
+            "El masaje es una de las artes mas sutiles"
         ],
         "coletilla": "¡ Deja que te cuide !"
     },
@@ -22,36 +22,41 @@
     "secciones": [
         {
             "titulo": "Masaje Deportivo y Superior",
-            "texto": "Después de unas merecidas vacaciones, vuelvo con las pilas cargadas",
+            "texto": "El masaje es una de las artes mas sutiles ..",
             "precio": 35
         },
         {
             "titulo": "Quiromasaje",
-            "texto": "Después de unas merecidas vacaciones, vuelvo con las pilas cargadas",
+            "texto": "El masaje es una de las artes mas sutiles ..",
             "precio": 30
         },
         {
             "titulo": "Masaje Relajante",
-            "texto": "Después de unas merecidas",
+            "texto": "El masaje es una de las artes mas sutiles ..",
             "precio": 25
         },
         {
-            "titulo": "Drenaje Limfatico Mnual",
-            "texto": "Después de unas merecidas",
+            "titulo": "Drenaje Limfático Manual",
+            "texto": "El masaje es una de las artes mas sutiles ..",
             "precio": 45
+        },
+        {
+            "titulo": "Kinesiotape, Vendaje neuromuscular ",
+            "texto": "El masaje es una de las artes mas sutiles ..",
+            "precio": 55
         }
     ],
     "pie": [
         {
-            "titulo": "contacto",
-            "texto": "iwonamasaje@gmail.com<br> Movil 678 19 45 12"
+            "titulo": "Contacto",
+            "texto": "<a href=\"mailto:iwonamasaje@gmail.com\" target=\"_blank\">iwonamasaje@gmail.com</a><br><a href=\"tel:346781945\" target=\"_blank\">Movil 678 19 45 12</a>"
         },
         {
-            "titulo": "direccion",
+            "titulo": "Direccion",
             "texto": "Idiazabal 7 - B - 3º C<br>20130, URNIETA"
         },
         {
-            "titulo": "facebook",
+            "titulo": "Facebook",
             "texto": "<a href=\"https://www.facebook.com/\" target=\"_blanc\">www.facebook.com</a>"
         }
     ]
