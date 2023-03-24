@@ -9,6 +9,9 @@ const inicio = () => {
     const eslogan = document.getElementById('eslogan')
     const coletilla = document.getElementById('coletilla')
     const imgPortada = document.getElementById('imgPortada')
+    imgPortada.addEventListener('load', () => {
+        imgPortada.style.opacity = '1'
+    })
     // ARRANQUE
     fetch("data.json")
         .then(response => response.json())
@@ -45,13 +48,10 @@ const inicio = () => {
                                 ${data.pie[i].texto}</div>`
             }
             setInterval(presentacion, 5000)
-
+            movil()
         })
 }
 const presentacion = () => {
-    imgPortada.addEventListener('load', () => {
-        imgPortada.style.opacity = '1'
-    })
     imgPortada.style.opacity = '0'
     setTimeout(() => {
         imgPortada.src = `img/${DATOS.imagenes[foto]}`
@@ -68,5 +68,15 @@ const fechaActual = () => {
     const diasSemana = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"]
     const meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
     return (`${diasSemana[hoy.getDay()]}, ${hoy.getDate()} de ${meses[hoy.getMonth()]} de ${hoy.getFullYear()}`)
+}
+const movil = ()=>{
+    if (navigator.userAgent.match(/Android/i)
+    || navigator.userAgent.match(/webOS/i)
+    || navigator.userAgent.match(/iPhone/i)
+    || navigator.userAgent.match(/iPad/i)
+    || navigator.userAgent.match(/iPod/i)
+    || navigator.userAgent.match(/BlackBerry/i)
+    || navigator.userAgent.match(/Windows Phone/i)){
+        document.getElementById("estilo").setAttribute('href','movil.css') }
 }
 window.onload = inicio

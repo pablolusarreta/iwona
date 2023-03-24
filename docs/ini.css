@@ -1,0 +1,28 @@
+@font-face {
+    font-family: logo;
+    src: url("fuentes/VINERITC.TTF");
+}
+
+@font-face {
+    font-family: titulo;
+    src: url("fuentes/ubuntu.woff");
+}
+
+@font-face {
+    font-family: texto;
+    src: url("fuentes/segoe.ttf");
+}
+
+:root {
+    --color1: #0a9;
+    --color2: rgb(194, 138, 79);
+    --color3: rgb(79, 108, 194);
+    --color4: #0fc;
+    --colorFondo: #fff;
+    --colorText: #333;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
