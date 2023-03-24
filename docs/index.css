@@ -98,6 +98,8 @@ header>div>a>img {
 
 #coletilla {
     opacity: 1;
+    font-size: 32px;
+    margin-bottom:120px;
 }
 
 /*----------------------------------------------------------*/
@@ -211,7 +213,7 @@ footer>div>span {
     font-size: 14px;
     font-weight: 900;
     color: var(--color1);
-    text-transform:capitalize ;
+    text-transform: capitalize;
 }
 
 footer>div>img {
