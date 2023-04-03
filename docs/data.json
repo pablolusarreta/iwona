@@ -5,7 +5,7 @@
         "eslogan": [
             "Cuida de tu cuerpo, es el único lugar que tienes para vivir",
             "Relaja, libera, renueva ...",
-            "El masaje es una de las artes mas sutiles"
+            "El masaje es una de las artes más sutiles"
         ],
         "coletilla": "¡ Deja que te cuide !"
     },
@@ -23,28 +23,28 @@
         {
             "titulo": "Masaje Deportivo y Superior",
             "texto": "Ayuda a la recuperación de lesiones en cualquier zona del cuerpo y previene de futuras lesiones. ",
-            "precio": 35
+            "precio": 40
         },
         {
             "titulo": "Quiromasaje",
             "texto": "Son diferentes técnicas de masaje manual en zonas del cuerpo a tratar, puede generar efectos reguladores sobre dolencias concretas, así como aportar sensación general de energía, potenciar estados de ánimo y disminuir el cansancio. ",
-            "precio": 30
+            "precio": 38
         },
         {
             "titulo": "Masaje Relajante",
             "texto": "Consiste en la realización de maniobras superficiales en los que la intensidad de la presión es suave y el ritmo lento y repetitivo, se pierde la sensación de dolor y los músculos se relajan. ",
-            "precio": 25
+            "precio": 35
         },
         {
             "titulo": "Drenaje Limfático Manual",
             "texto": "Sirve para mejorar el funcionamiento del sistema linfático y busca los puntos con mayor hinchazón y los anula, elimina toxinas mejorando la circulación sanguínea. ",
-            "precio": 45
+            "precio": 50
         }
     ],
     "pie": [
         {
             "titulo": "contacto",
-            "texto": "<a href=\"mailto:iwonamasaje@gmail.com\" target=\"_blank\">iwonamasaje@gmail.com</a><br><a href=\"tel:346781945\" target=\"_blank\">Movil 678 19 45 12</a>"
+            "texto": "<a href=\"mailto:iwona@madej.com.es\" target=\"_blank\">iwona@madej.com.es</a><br><a href=\"tel:346781945\" target=\"_blank\">Movil 678 19 45 12</a>"
         },
         {
             "titulo": "direccion",
