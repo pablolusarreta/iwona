@@ -93,13 +93,41 @@ header>div>a>img {
     font-weight: 900;
     color: #666;
     opacity: 0;
-    transition: opacity 2s
+    transition: opacity 2s;
+
 }
 
 #coletilla {
     opacity: 1;
     font-size: 32px;
-    margin-bottom:120px;
+    margin-bottom: 120px;
+}
+#eslogan:before,
+#coletilla:before,
+#eslogan:after,
+#coletilla:after{
+    content: "";
+    display: block;
+    position: relative;
+    height: 20px;
+    width:40px;
+    opacity: .2;
+    margin: 20px  0;
+}
+
+#eslogan:before,
+#coletilla:before {   
+    border-top: 8px solid var(--color1);
+    border-left: 8px solid var(--color1);
+
+}
+#eslogan:after,
+#coletilla:after {
+
+    left: calc(100% - 48px);
+    border-right: 8px solid var(--color1);
+    border-bottom: 8px solid var(--color1);
+
 }
 
 /*----------------------------------------------------------*/
