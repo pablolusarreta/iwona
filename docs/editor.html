@@ -5,53 +5,238 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-store" />
     <title>EDITOR</title>
     <style>
+        @font-face {
+            font-family: texto;
+            src: url("fuentes/ubuntu.woff");
+        }
+
         * {
             font-size: 14px;
+            margin: 0;
+            padding: 0;
+            box-sizing: content-box;
+            user-select: none;
+        }
+
+        body {
+            font-family: texto;
+            background-color: #333;
+        }
+
+        header,
+        #separador {
+            width: 100%;
+            height: 60px;
+        }
+
+        header {
+            position: fixed;
+            box-shadow:0px 0px 20px #999;
+            background-color: #f0f0f0;
+        }
+
+        header>div {
+            position: fixed;
+            top: 14px;
+            font-size: 22px;
+            padding-left: 8vw;
+            color: #0a9;
+            font-weight: 900;
+        }
+
+        header>div>span {
+            font-size: 16px;
+            margin-left: 40px;
+        }
+
+        button {
+            position: fixed;
+            height: 45px;
+            top: 8px;
+            left: 72vw;
+            font-family: texto;
+            background-color: #0a9;
+            color: #fff;
+            font-weight: 900;
+            border: none;
+            padding: 0px 80px;
+            transition: background-color .5s;
+        }
+
+        button:hover {
+            background-color: #0cb;
+        }
+
+        section {
+            margin: 40px auto;
+            padding-bottom: 40px;
+            width: 80vw;
+            color: #333;
+            background-color: #f0f0f0;
+            box-shadow: 3px 3px 12px #666;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            padding: 10px;
+            font-weight: 900;
         }
 
         h1 {
-            font-size: 20px;
+            width: calc(100% - 20px);
+            background-color: #999;
+            color: #fff;
+            font-size: 22px;
+            text-transform: uppercase;
         }
 
         h2 {
+            background-color: #f0f0f0;
             font-size: 18px;
+            text-transform: capitalize;
+        }
+
+        h3 {
+            font-size: 14px;
+            text-transform: capitalize;
         }
 
         textarea {
-            position: relative;
-            margin: auto calc(10vw - 20px);
-            width: 80vw;
+            font-size: 16px;
+            padding: 10px;
+            width: calc(100% - 60px);
+            max-width: calc(100% - 60px);
+            min-width: calc(100% - 60px);
+            margin-left: 20px;
+            height: 14px;
+            min-height: 14px;
+            color: #333;
+            border: none;
+            border-radius: 4px;
+            transition: height .6s;
+            overflow-y: hidden;
         }
     </style>
+    <script>
+        const textinfo = [
+            'iwona.madej.com.es',
+            '<span>Editor de contenico</span>',
+            '<span style="color:#f33">Hay cambios sin guardar<span>',
+            '<span style="color:#f33">Guardando cambios ....<span>'
+        ]
+        let DATOS
+        //
+        const inicio = () => {
+            let salida = `<header><div id="info"></div><button onclick="actualiza()">ACTUALIZAR</button></header><div id="separador"></div>`
+            const t = new Date()
+            fetch(`data.json?t=${t.getTime()}`)
+                .then(response => response.json())
+                .then(data => {
+                    DATOS = data
+                    for (const ele in data) {
+                        salida += `<section><h1>${ele}<h1>`
+                        for (const nom in data[ele]) {
+                            if (typeof data[ele][nom] === 'object') {
+                                salida += formatea(nom, 'h2')
+                                for (const nom2 in data[ele][nom]) {
+                                    salida += `${formatea(nom2, 'h3')}<textarea id="${ele}.${nom}.${nom2}">${data[ele][nom][nom2]}</textarea>`
+                                }
+                            } else {
+                                salida += `<h2>${nom}</h2><textarea id="${ele}.${nom}">${data[ele][nom]}</textarea>`
+                            }
+                        }
+                        salida += '</section>'
+                    }
+                    document.body.innerHTML = salida
+                    arranca()
+                })
+        }
+        const formatea = (exp, h) => {
+            return isNaN(exp) ? `<${h}>${exp}</${h}>` : `<${h}>[ ${exp} ]</${h}>`
+        }
+        //
+        const arranca = () => {
+            const textarea = document.getElementsByTagName('textarea');
+            const info = document.getElementById('info')
+            info.innerHTML = textinfo[0] + textinfo[1]
+            for (let i in textarea) {
+
+                textarea[i].addEventListener('focus', () => {
+                    textarea[i].style.height = '150px'
+                });
+
+                textarea[i].addEventListener('blur', () => {
+                    textarea[i].style.height = '14px'
+                });
+
+                textarea[i].addEventListener('change', txt => {
+                    const id = textarea[i].id.split('.')
+                    info.innerHTML = textinfo[0] + textinfo[2]
+                    textarea[i].style.color = '#f33'
+                    for (let i in id) {
+                        id[i] = isNaN(id[i]) ? id[i] : Number(id[i])
+                    }
+                    let exp = id[0] + (isNaN(id[1]) ? '.' + id[1] : '[' + id[1] + ']')
+                    exp = id.length > 2 ? exp + (isNaN(id[2]) ? '.' + id[2] : '[' + id[2] + ']') : exp
+                    eval(`DATOS.${exp}=textarea[i].value`)
+                    console.log(eval('DATOS.' + exp))
+                });
+            }
+        }
+        //
+        const actualiza = () => {
+            const t = new Date()
+            info.innerHTML = textinfo[0] + textinfo[3]
+            fetch(`actualiza?t=${t.getTime()}`, {
+                method: 'POST',
+                body: JSON.stringify(DATOS),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }).then(res => res.json())
+                .then(data => {
+                    console.log(data)
+                    if (data.error === false) {
+                        inicio()
+                    }
+                })
+                .catch(err => {
+                    console.log({ error: 'Error AJAX' })
+                })
+        }
+        // 
+        const autentico = () => {
+            const texto = prompt('Escribe tu identificador :')
+            fetch('autentico', {
+                method: 'POST',
+                body: JSON.stringify({ identificador: texto }),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }).then(res => res.json())
+                .then(data => {
+                    console.log(data)
+                    if (data.error === false) {
+                        inicio()
+                    } else {
+                        alert('¡Identificador incorrecto!')
+                        autentico()
+                    }
+                })
+
+        }
+        window.addEventListener('load', autentico)
+    </script>
 
 </head>
 
 <body>
-    <script>
-        const idiomas = ['castellano', 'euskera']
-        let salida = new String()
-        fetch(`json/${idiomas[0]}.json`)
-            .then(response => response.json())
-            .then(data => {
-                for (const ele in data) {
-                    salida += `<h1>${ele}<h1>`
-                    for (const nom in data[ele]) {
-                        if (typeof data[ele][nom] == 'object') {
-                            salida += `<h2>${nom}<h2>`
-                            for (const nom2 in data[ele][nom]) {
-                                salida += `${nom2}:<br><textarea>${data[ele][nom][nom2]}</textarea><br>`
-                            }
-                        } else {
-                            salida += `&nbsp;&nbsp;${nom}:<br><textarea>${data[ele][nom]}</textarea><br>`
-                        }
-                    } 
-                    salida += '<hr>'
-                }
-                document.body.innerHTML = salida
-            })
-    </script>
+
 </body>
 
 </html>

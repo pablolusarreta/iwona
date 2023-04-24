@@ -2,24 +2,31 @@ const express = require('express')
 const morgan = require('morgan')
 const path = require('path')
 const app = express()
-// rutas
-/*const sqlite = require('./rutas/sqlite')
-const graficos = require('./rutas/graficos')
-const sqlitemaster = require('./rutas/sqlitemaster')*/
+const router = express.Router()
+const fs = require('fs')
 // Configuración
 app.set('port', process.env.PORT || 3000)
-
-// middlewares
+app.set('views', __dirname)
+// Ficheros estaticos
+app.use(express.static(path.join(__dirname, './docs')))
+// Accesorios
 app.use(morgan('dev'))
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
-// static files
-app.use(express.static(path.join(__dirname, './docs')))
-// routes
-/*app.use(sqlite)
-app.use(graficos)
-app.use(sqlitemaster)*/
-//app.use(crud)
+// Rutas
+app.use('/', router.post('/actualiza', (req, res) => {
+  fs.writeFile('./docs/data.json', JSON.stringify(req.body), (err) => {
+    if (err) throw err; 
+      res.send({ error: false })
+  })
+}))
+app.use('/', router.post('/autentico', (req, res) => {
+    if (req.body.identificador === "Iwona.1983") {
+      res.send({ error: false })
+    } else {
+      res.send({ error: true })
+    }
+}))
 // ARRANQUE SERVIDOR
 app.listen(app.get('port'), () => {
   console.log(`Servidor en puerto -  ${app.get('port')}`)

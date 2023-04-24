@@ -111,22 +111,21 @@ header>div>a>img {
     position: relative;
     height: 20px;
     width:40px;
-    opacity: .2;
     margin: 20px  0;
 }
 
 #eslogan:before,
 #coletilla:before {   
-    border-top: 8px solid var(--color1);
-    border-left: 8px solid var(--color1);
+    border-top: 1px solid var(--color1);
+    border-left: 1px solid var(--color1);
 
 }
 #eslogan:after,
 #coletilla:after {
 
     left: calc(100% - 48px);
-    border-right: 8px solid var(--color1);
-    border-bottom: 8px solid var(--color1);
+    border-right: 1px solid var(--color1);
+    border-bottom: 1px solid var(--color1);
 
 }
 
@@ -241,7 +240,6 @@ footer>div>span {
     font-size: 14px;
     font-weight: 900;
     color: var(--color1);
-    text-transform: capitalize;
 }
 
 footer>div>img {

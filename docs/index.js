@@ -17,6 +17,7 @@ const inicio = () => {
         .then(response => response.json())
         .then(data => {
             DATOS = data
+            DATOS.imagenes = ["P01.jpg", "P02.jpg", "P03.jpg", "P04.jpg", "P05.jpg", "P06.jpg", "P07.jpg", "P08.jpg"]                
             cabecera.innerHTML = `<div>${fechaActual()}</div>
                                     <div> 
                                         <a href="https://api.whatsapp.com/send?phone=34678194512&text=" target="_blank"><img src="img/whatsapp.png">watsapp</a> 
@@ -42,7 +43,7 @@ const inicio = () => {
             }
 
             for (const i in data.pie) {
-                pie.innerHTML += `<div><img src="img/${data.pie[i].titulo}.png">
+                pie.innerHTML += `<div><img src="img/${data.pie[i].img}">
                                 <span>${data.pie[i].titulo}</span>
                                 <br>
                                 ${data.pie[i].texto}</div>`
@@ -69,14 +70,15 @@ const fechaActual = () => {
     const meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
     return (`${diasSemana[hoy.getDay()]}, ${hoy.getDate()} de ${meses[hoy.getMonth()]} de ${hoy.getFullYear()}`)
 }
-const movil = ()=>{
+const movil = () => {
     if (navigator.userAgent.match(/Android/i)
-    || navigator.userAgent.match(/webOS/i)
-    || navigator.userAgent.match(/iPhone/i)
-    || navigator.userAgent.match(/iPad/i)
-    || navigator.userAgent.match(/iPod/i)
-    || navigator.userAgent.match(/BlackBerry/i)
-    || navigator.userAgent.match(/Windows Phone/i)){
-        document.getElementById("estilo").setAttribute('href','movil.css') }
+        || navigator.userAgent.match(/webOS/i)
+        || navigator.userAgent.match(/iPhone/i)
+        || navigator.userAgent.match(/iPad/i)
+        || navigator.userAgent.match(/iPod/i)
+        || navigator.userAgent.match(/BlackBerry/i)
+        || navigator.userAgent.match(/Windows Phone/i)) {
+        document.getElementById("estilo").setAttribute('href', 'movil.css')
+    }
 }
 window.onload = inicio
