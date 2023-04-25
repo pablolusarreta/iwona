@@ -34,7 +34,7 @@
 
         header {
             position: fixed;
-            box-shadow:0px 0px 20px #999;
+            box-shadow: 0px 0px 20px #999;
             background-color: #f0f0f0;
         }
 
@@ -52,21 +52,36 @@
             margin-left: 40px;
         }
 
-        button {
+        button,
+        a {
+            display: inline-block;
             position: fixed;
             height: 45px;
             top: 8px;
-            left: 72vw;
+            right:10vw;
             font-family: texto;
             background-color: #0a9;
             color: #fff;
             font-weight: 900;
             border: none;
-            padding: 0px 80px;
+            width: 200px;
             transition: background-color .5s;
         }
 
-        button:hover {
+        a {
+            right: calc(10vw + 300px);
+            text-decoration: none;
+            text-align: center;
+
+        }
+
+        a>div {
+
+            margin-top: 13px;
+        }
+
+        button:hover,
+        a:hover {
             background-color: #0cb;
         }
 
@@ -132,7 +147,10 @@
         let DATOS
         //
         const inicio = () => {
-            let salida = `<header><div id="info"></div><button onclick="actualiza()">ACTUALIZAR</button></header><div id="separador"></div>`
+            let salida = `<header><div id="info"></div>
+                <a href="./data.json" download="./data.json"><div>Descarga Datos</div></a>
+                <button onclick="actualiza()">ACTUALIZAR</button>
+                </header><div id="separador"></div>`
             const t = new Date()
             fetch(`data.json?t=${t.getTime()}`)
                 .then(response => response.json())
@@ -230,7 +248,7 @@
                 })
 
         }
-        window.addEventListener('load', autentico)
+        window.addEventListener('load', inicio)
     </script>
 
 </head>
