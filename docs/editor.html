@@ -58,7 +58,7 @@
             position: fixed;
             height: 45px;
             top: 8px;
-            right:10vw;
+            right: 10vw;
             font-family: texto;
             background-color: #0a9;
             color: #fff;
@@ -81,7 +81,8 @@
         }
 
         button:hover,
-        a:hover {
+        a:hover,
+        h1>span {
             background-color: #0cb;
         }
 
@@ -136,6 +137,16 @@
             transition: height .6s;
             overflow-y: hidden;
         }
+
+        h1>span {
+            padding: 0px 8px;
+            margin-left: 30px;
+            font-size: 20px;
+            background-color: #0a9;
+            color: #fff;
+            font-weight: 900;
+            transition: background-color .5s;
+        }
     </style>
     <script>
         const textinfo = [
@@ -157,7 +168,10 @@
                 .then(data => {
                     DATOS = data
                     for (const ele in data) {
-                        salida += `<section><h1>${ele}<h1>`
+                        const arr = Array.isArray(data[ele])
+                        const mas = arr ? `<span onclick="anade('${ele}')">+</span>` : ''
+                        //const menos = arr ? `<span onclick="elimina('${ele}')">x</span>` : ''
+                        salida += `<section><h1>${ele}${mas}<h1>`
                         for (const nom in data[ele]) {
                             if (typeof data[ele][nom] === 'object') {
                                 salida += formatea(nom, 'h2')
@@ -173,6 +187,16 @@
                     document.body.innerHTML = salida
                     arranca()
                 })
+        }
+        const anade = ob => {
+            if (confirm(`Se añadira un elemento vacío en "${ob}"`)) {
+                const obn = {}
+                for (const i in DATOS[ob][0]) {
+                    obn[i] = ''
+                }
+                DATOS[ob].push(obn)
+                actualiza()
+            }
         }
         const formatea = (exp, h) => {
             return isNaN(exp) ? `<${h}>${exp}</${h}>` : `<${h}>[ ${exp} ]</${h}>`
@@ -224,7 +248,7 @@
                     }
                 })
                 .catch(err => {
-                    console.log({ error: 'Error AJAX' })
+                    console.log({ error: `Error AJAX: ${err}` })
                 })
         }
         // 
@@ -246,9 +270,9 @@
                         autentico()
                     }
                 })
-
         }
-        window.addEventListener('load', autentico)
+        //window.addEventListener('load', autentico)
+        window.addEventListener('load', inicio)
     </script>
 
 </head>
