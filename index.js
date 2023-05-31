@@ -1,9 +1,11 @@
+require('dotenv').config()
 const express = require('express')
 const morgan = require('morgan')
 const path = require('path')
 const app = express()
 const router = express.Router()
 const fs = require('fs')
+const CEC = process.env.CLAVE_EDITOR_CONTENIDO || "NOKEY"
 // Configuración
 app.set('port', process.env.PORT || 3000)
 app.set('views', __dirname)
@@ -21,7 +23,7 @@ app.use('/', router.post('/actualiza', (req, res) => {
   })
 }))
 app.use('/', router.post('/autentico', (req, res) => {
-    if (req.body.identificador === "Iwona.1983") {
+    if (req.body.identificador === CEC) {
       res.send({ error: false })
     } else {
       res.send({ error: true })
@@ -31,4 +33,3 @@ app.use('/', router.post('/autentico', (req, res) => {
 app.listen(app.get('port'), () => {
   console.log(`Servidor en puerto -  ${app.get('port')}`)
 })
-
