@@ -5,7 +5,7 @@ const path = require('path')
 const app = express()
 const router = express.Router()
 const fs = require('fs')
-const CEC = process.env.CLAVE_EDITOR_CONTENIDO || "NOKEY"
+const CEC = process.env.CLAVE_EDITOR_CONTENIDO || "clave_editor"
 // Configuración
 app.set('port', process.env.PORT || 3000)
 app.set('views', __dirname)
