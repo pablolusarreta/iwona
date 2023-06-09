@@ -17,7 +17,7 @@ const inicio = () => {
         .then(response => response.json())
         .then(data => {
             DATOS = data
-            DATOS.imagenes = ["P01.jpg", "P02.jpg", "P03.jpg", "P04.jpg", "P05.jpg", "P06.jpg", "P07.jpg", "P08.jpg"]                
+            DATOS.imagenes = ["P01.jpg", "P02.jpg", "P03.jpg", "P04.jpg", "P05.jpg", "P06.jpg", "P07.jpg", "P08.jpg", "P09.jpg", "P10.jpg"]
             cabecera.innerHTML = `<div>${fechaActual()}</div>
                                     <div> 
                                         <a href="https://api.whatsapp.com/send?phone=34678194512&text=" target="_blank"><img src="img/whatsapp.png">watsapp</a> 
