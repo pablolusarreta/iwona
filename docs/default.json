@@ -1,7 +1,7 @@
 {
     "titular": {
         "titulo": "Iwona Madej",
-        "descripcion": "Masaje Deportivo y Superior,<br>Quiromasaje y Drenaje Linfático Manual.",
+        "descripcion": "Masaje Deportivo y Superior, Quiromasaje, <br>Reflexología Podal y Drenaje Linfático Manual.",
         "eslogan": [
             "Cuida de tu cuerpo, es el único lugar que tienes para vivir.",
             "Relaja, libera, renueva ...",
@@ -28,6 +28,11 @@
         {
             "titulo": "Drenaje Limfático Manual",
             "texto": "Sirve para mejorar el funcionamiento del sistema linfático y busca los puntos con mayor hinchazón y los anula, elimina toxinas mejorando la circulación sanguínea. ",
+            "precio": "50"
+        },
+        {
+            "titulo": "Reflexología Podal",
+            "texto": "Reflexología podal es una técnica terapéutica basada en la estimulación de puntos sobre los pies denominados zonas de reflejo. Estas zonas se corresponden con distintas partes del cuerpo.",
             "precio": "50"
         }
     ],
