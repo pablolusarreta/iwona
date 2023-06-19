@@ -13,27 +13,32 @@
         {
             "titulo": "Masaje Deportivo y Superior",
             "texto": "Ayuda a la recuperación de lesiones en cualquier zona del cuerpo y previene de futuras lesiones. ",
-            "precio": "40"
+            "precio": "40",
+            "duracion": "1 h"
         },
         {
             "titulo": "Quiromasaje",
             "texto": "Son diferentes técnicas de masaje manual en zonas del cuerpo a tratar, puede generar efectos reguladores sobre dolencias concretas, así como aportar sensación general de energía, potenciar estados de ánimo y disminuir el cansancio. ",
-            "precio": "38"
+            "precio": "38",
+            "duracion": "1 h"
         },
         {
             "titulo": "Masaje Relajante",
             "texto": "Consiste en la realización de maniobras superficiales en los que la intensidad de la presión es suave y el ritmo lento y repetitivo, se pierde la sensación de dolor y los músculos se relajan. ",
-            "precio": "35"
+            "precio": "35",
+            "duracion": "1 h"
         },
         {
             "titulo": "Drenaje Limfático Manual",
             "texto": "Sirve para mejorar el funcionamiento del sistema linfático y busca los puntos con mayor hinchazón y los anula, elimina toxinas mejorando la circulación sanguínea. ",
-            "precio": "50"
+            "precio": "50",
+            "duracion": "1 h"
         },
         {
             "titulo": "Reflexología Podal",
             "texto": "Reflexología podal es una técnica terapéutica basada en la estimulación de puntos sobre los pies denominados zonas de reflejo. Estas zonas se corresponden con distintas partes del cuerpo.",
-            "precio": "50"
+            "precio": "50",
+            "duracion": "1 h"
         }
     ],
     "pie": [

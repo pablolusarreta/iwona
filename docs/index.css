@@ -102,24 +102,26 @@ header>div>a>img {
     font-size: 32px;
     margin-bottom: 120px;
 }
+
 #eslogan:before,
 #coletilla:before,
 #eslogan:after,
-#coletilla:after{
+#coletilla:after {
     content: "";
     display: block;
     position: relative;
     height: 20px;
-    width:40px;
-    margin: 20px  0;
+    width: 40px;
+    margin: 20px 0;
 }
 
 #eslogan:before,
-#coletilla:before {   
+#coletilla:before {
     border-top: 1px solid var(--color1);
     border-left: 1px solid var(--color1);
 
 }
+
 #eslogan:after,
 #coletilla:after {
 
@@ -177,7 +179,7 @@ section>div {
     border-radius: 2px 2px;
 }
 
-section>div>div:nth-child(1) {
+section>div>div:nth-child(1), section>div>div:nth-child(2) {
     position: relative;
     width: 50px;
     height: 50px;
@@ -192,15 +194,24 @@ section>div>div:nth-child(1) {
 }
 
 section>div>div:nth-child(2) {
+    background-color: transparent;
+    color: #000;
+    top: -50px;
+    right: 90px;
+}
+section>div>div:nth-child(2)>img{
+    margin-right: 10px;
+}
+section>div>div:nth-child(3) {
     position: relative;
-    top: -40px;
+    top: -90px;
     font-family: titulo, sans-serif;
     font-size: 20px;
 }
 
-section>div>div:nth-child(3) {
+section>div>div:nth-child(4) {
     position: relative;
-    top: -20px;
+    top: -70px;
     font-size: 16px;
 }
 
