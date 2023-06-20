@@ -37,9 +37,11 @@ const inicio = () => {
             for (const i in data.secciones) {
                 secciones.innerHTML += `<div style="background-image:url(img/${i}.jpg)">
                                             <div>${data.secciones[i].precio} €</div>
-                                            <div><img src="./img/relog.png">${data.secciones[i].duracion}</div>
-                                            <div>${data.secciones[i].titulo}</div>
-                                            <div>${data.secciones[i].texto}</div>                                          
+                                            <div>${data.secciones[i].titulo} 
+                                                <div><img src="./img/relog.png">${data.secciones[i].duracion}</div>
+                                            </div>
+                                            <div>${data.secciones[i].texto}
+                                            </div> 
                                         </div>`
             }
 

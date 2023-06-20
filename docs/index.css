@@ -179,7 +179,7 @@ section>div {
     border-radius: 2px 2px;
 }
 
-section>div>div:nth-child(1), section>div>div:nth-child(2) {
+section>div>div:nth-child(1) {
     position: relative;
     width: 50px;
     height: 50px;
@@ -194,26 +194,37 @@ section>div>div:nth-child(1), section>div>div:nth-child(2) {
 }
 
 section>div>div:nth-child(2) {
-    background-color: transparent;
-    color: #000;
-    top: -50px;
-    right: 90px;
-}
-section>div>div:nth-child(2)>img{
-    margin-right: 10px;
-}
-section>div>div:nth-child(3) {
     position: relative;
-    top: -90px;
+    top: -40px;
     font-family: titulo, sans-serif;
     font-size: 20px;
 }
 
-section>div>div:nth-child(4) {
+section>div>div:nth-child(2)>div {
+    display: inline-block;
+    margin-left: 20px;
+    width: auto;
+    height: 24px;
+    padding: 0 8px;
+    border-radius: 12px;
+    background-color: #fff;
+    opacity: 0.6;
+    font-size: 16px;
+    line-height: 10px;
+    text-align: center;
+}
+
+section>div>div:nth-child(2)>div>img {
+    margin-right: 10px;
+    margin-top: 4px;
+}
+
+section>div>div:nth-child(3) {
     position: relative;
-    top: -70px;
+    top: -20px;
     font-size: 16px;
 }
+
 
 /*----------------------------------------------------------*/
 #direccion {
