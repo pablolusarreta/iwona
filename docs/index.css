@@ -58,8 +58,8 @@ header>div>a>img {
 /*----------------------------------------------------------*/
 #titular {
     font-family: titulo, sans-serif;
-    width: 92%;
-    margin: 0 4%;
+    width: 80%;
+    margin: 0 10%;
     color: var(--color1);
     text-align: center;
 }
