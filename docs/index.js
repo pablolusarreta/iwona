@@ -17,7 +17,6 @@ const inicio = () => {
         .then(response => response.json())
         .then(data => {
             DATOS = data
-            DATOS.imagenes = ["P01.jpg", "P02.jpg", "P03.jpg", "P04.jpg", "P05.jpg", "P06.jpg", "P07.jpg", "P08.jpg", "P09.jpg", "P10.jpg"]
             cabecera.innerHTML = `<div>${fechaActual()}</div>
                                     <div> 
                                         <a href="https://api.whatsapp.com/send?phone=34678194512&text=" target="_blank"><img src="img/whatsapp.png">watsapp</a> 
@@ -27,7 +26,6 @@ const inicio = () => {
             titular.innerHTML = `<div></div>
                                 <div>${data.titular.titulo}</div>
                                 <div>${data.titular.descripcion}</div>`
-            foto = Math.floor(data.imagenes.length * Math.random())
             eslogan_pres()
             presentacion()
 
@@ -51,14 +49,14 @@ const inicio = () => {
                                 <br>
                                 ${data.pie[i].texto}</div>`
             }
-            setInterval(presentacion, 5000)
+            fotosInicio()
             movil()
         })
 }
 const presentacion = () => {
     imgPortada.style.opacity = '0'
     setTimeout(() => {
-        imgPortada.src = `img/${DATOS.imagenes[foto]}`
+        imgPortada.src = `img/inicio/${DATOS.imagenes[foto]}`
         foto = (foto == (DATOS.imagenes.length - 1)) ? 0 : foto + 1
     }, 500)
 }
@@ -83,5 +81,19 @@ const movil = () => {
         || navigator.userAgent.match(/Windows Phone/i)) {
         document.getElementById("estilo").setAttribute('href', 'movil.css')
     }
+}
+const fotosInicio = () => {
+    fetch('fotosInicio', {
+        method: 'POST',
+        body: '',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }).then(res => res.json())
+        .then(ficheros => {
+            DATOS.imagenes = ficheros
+            foto = Math.floor(DATOS.imagenes.length * Math.random())
+            setInterval(presentacion, 5000)
+        })
 }
 window.onload = inicio

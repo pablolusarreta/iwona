@@ -18,16 +18,19 @@ app.use(express.json())
 // Rutas
 app.use('/', router.post('/actualiza', (req, res) => {
   fs.writeFile('./docs/data.json', JSON.stringify(req.body), (err) => {
-    if (err) throw err; 
-      res.send({ error: false })
+    if (err) throw err;
+    res.send({ error: false })
   })
 }))
 app.use('/', router.post('/autentico', (req, res) => {
-    if (req.body.identificador === CEC) {
-      res.send({ error: false })
-    } else {
-      res.send({ error: true })
-    }
+  if (req.body.identificador === CEC) {
+    res.send({ error: false })
+  } else {
+    res.send({ error: true })
+  }
+}))
+app.use('/', router.post('/fotosInicio', (req, res) => {
+  res.send(fs.readdirSync('./docs/img/inicio') )    
 }))
 // ARRANQUE SERVIDOR
 app.listen(app.get('port'), () => {
