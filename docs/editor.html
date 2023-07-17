@@ -95,6 +95,12 @@
             box-shadow: 3px 3px 12px #666;
         }
 
+        #fotosInicio>img {
+            display: inline-block;
+            margin: 20px;
+            width: 200px;
+        }
+
         h1,
         h2,
         h3,
@@ -199,6 +205,8 @@
                         salida += '</section>'
                     }
                     document.body.innerHTML = salida
+                    //document.body.innerHTML = `${salida}<section id="fotosInicio"></section>`
+                    //fotosInicio()
                     arranca()
                 })
         }
@@ -213,7 +221,7 @@
             }
         }
         const elimina = (ob, i) => {
-            if (DATOS[ob].length < 2){
+            if (DATOS[ob].length < 2) {
                 alert('¡No se pueden eliminar todos los elementos!')
                 return false
             }
@@ -231,7 +239,7 @@
             const textarea = document.getElementsByTagName('textarea');
             const info = document.getElementById('info')
             info.innerHTML = textinfo[0] + textinfo[1]
-            for (let i in textarea) {
+            for (const i in textarea) {
 
                 textarea[i].addEventListener('focus', () => {
                     textarea[i].style.height = '150px'
@@ -296,8 +304,26 @@
                     }
                 })
         }
+        /*const fotosInicio = () => {
+            fetch('fotosInicio', {
+                method: 'POST',
+                body: '',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }).then(res => res.json())
+                .then(ficheros => {
+                    DATOS.imagenes = ficheros
+                    let salida = '<h1><span title="Añade una foto nueva" onclick="anadeFoto()">+</span>Imagenes Inicio</h1>'
+                    for (const i in DATOS.imagenes) {
+                        salida += `<img src="./img/inicio/${DATOS.imagenes[i]}" title="${DATOS.imagenes[i]}">`
+                    }
+                    document.getElementById("fotosInicio").innerHTML = salida
+                    console.log(DATOS)
+                })
+        }*/
         window.addEventListener('load', autentico)
-        // window.addEventListener('load', inicio)
+        //window.addEventListener('load', inicio)
     </script>
 
 </head>
