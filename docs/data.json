@@ -44,7 +44,7 @@
     "pie": [
         {
             "titulo": "Contacto",
-            "texto": "<a href='mailto:iwona@madej.com.es' target='_blank'>iwona@madej.com.es</a><br><a href='tel:678194512' target='_blank'>Movil 678 19 45 12</a>",
+            "texto": "<a href='mailto:iwona@madej.com.es' target='_blank'>iwona@madej.com.es</a><br><a href='tel:34678194512' target='_blank'>Movil 678 19 45 12</a>",
             "img": "contacto.png"
         },
         {
