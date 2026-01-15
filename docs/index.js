@@ -20,7 +20,7 @@ const inicio = () => {
             cabecera.innerHTML = `<div>${fechaActual()}</div>
                                     <div> 
                                         <a href="https://api.whatsapp.com/send?phone=34678194512&text=" target="_blank"><img src="img/whatsapp.png">watsapp</a> 
-                                        <a href="tel:346781945" target="_blank"><img src="img/telefono.png">llamar</a> 
+                                        <a href="tel:34678194512" target="_blank"><img src="img/telefono.png">llamar</a> 
                                         <a href="mailto:iwonamasaje@gmail.com" target="_blank"><img src="img/email.png">e-mail</a> 
                                     </div>`
             titular.innerHTML = `<div></div>
