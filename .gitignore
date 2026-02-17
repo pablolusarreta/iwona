@@ -1,7 +1,0 @@
-node_modules
-info-git.txt
-package-lock.json
-start.bat
-.vscode
-.env
-.gitignore

@@ -83,17 +83,8 @@ const movil = () => {
     }
 }
 const fotosInicio = () => {
-    fetch('fotosInicio', {
-        method: 'POST',
-        body: '',
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    }).then(res => res.json())
-        .then(ficheros => {
-            DATOS.imagenes = ficheros
-            foto = Math.floor(DATOS.imagenes.length * Math.random())
-            setInterval(presentacion, 5000)
-        })
+    DATOS.imagenes = ['P01.jpg', 'P02.jpg', 'P03.jpg', 'P04.jpg', 'P05.jpg', 'P06.jpg', 'P07.jpg', 'P08.jpg', 'P09.jpg', 'P10.jpg']
+    foto = Math.floor(DATOS.imagenes.length * Math.random())
+    setInterval(presentacion, 5000)
 }
 window.onload = inicio
