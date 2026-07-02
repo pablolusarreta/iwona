@@ -1,13 +1,13 @@
 {
     "titular": {
         "titulo": "Iwona Madej",
-        "descripcion": "Masaje Deportivo y Superior, Quiromasaje, Reflexología Podal y Drenaje Linfático Manual.",
+        "descripcion": "Masaje Deportivo y Superior, Quiromasaje, Reflexología Podal, Drenaje Linfático Manual y Brasileño, Masaje Japones Shiatsu.",
         "eslogan": [
             "Cuida de tu cuerpo, es el único lugar que tienes para vivir.",
             "Relaja, libera, renueva ...",
-            "El masaje es una de las artes más sutiles "
+            "El masaje es una de las artes más sutiles."
         ],
-        "coletilla": "¡ Deja que te cuide hoy !"
+        "coletilla": "¡ Dejate cuidar !"
     },
     "secciones": [
         {
@@ -33,6 +33,18 @@
             "texto": "Sirve para mejorar el funcionamiento del sistema linfático y busca los puntos con mayor hinchazón y los anula, elimina toxinas mejorando la circulación sanguínea. ",
             "precio": "50",
             "duracion": "1 H"
+        },
+        {
+            "titulo": "Drenaje Linfático Brasileño",
+            "texto": "Es una técnica manual que combina el drenaje clásico  con un masaje moldeador firme y rápido. Desinflama el cuerpo al instante. Elimina toxinas y líquidos retenidos, moldea y define tu silueta de forma inmediata.",
+            "precio": "60",
+            "duracion": "1.5 H"
+        },
+        {
+            "titulo": "Shiatsu Masaje Japones",
+            "texto": "El Shiatsu es una terapia japonesa que utiliza da presión de los dedos para aliviar el estres, eliminar dolores musculares y restaurar tu energía. Una técnica milenaria, sin aceites y con ropa cómoda, ideal para reconectar con tu bienestar.",
+            "precio": "60",
+            "duracion": "1.5 H"
         },
         {
             "titulo": "Reflexología Podal",

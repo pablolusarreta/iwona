@@ -83,7 +83,7 @@ const movil = () => {
     }
 }
 const fotosInicio = () => {
-    DATOS.imagenes = ['P01.jpg', 'P02.jpg', 'P03.jpg', 'P04.jpg', 'P05.jpg', 'P06.jpg', 'P07.jpg', 'P08.jpg', 'P09.jpg', 'P10.jpg']
+    DATOS.imagenes = ['P01.jpg', 'P02.jpg', 'P03.jpg', 'P04.jpg', 'P05.jpg', 'P06.jpg', 'P07.jpg', 'P08.jpg', 'P09.jpg', 'P10.jpg', 'P11.jpg']
     foto = Math.floor(DATOS.imagenes.length * Math.random())
     setInterval(presentacion, 5000)
 }
